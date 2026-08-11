@@ -1,0 +1,329 @@
+/* ==========================================================================
+   Livbouldr — shared styles (PARODY SITE, not a real company/offer)
+   Palette matched to GoodHabitz brand colors:
+     Purple Heart #5A14BD · Lipstick #B20060 · Bright Sun #FAC541
+   ========================================================================== */
+
+:root {
+  --purple: #5a14bd;
+  --purple-light: #7a34d1;
+  --magenta: #b20060;
+  --magenta-dark: #8a004a;
+  --sun: #fac541;
+  --ink: #241a33;
+  --muted: #5f5470;
+  --paper: #f7f5fb;
+  --line: #e7e1f0;
+  --max-width: 960px;
+  --radius: 12px;
+  --shadow: 0 6px 24px rgba(36, 12, 64, 0.1);
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+/* ---- Disclaimer banner (must appear on every page) ---------------------- */
+.disclaimer-banner {
+  background: #1e0b33;
+  color: #ecd8ff;
+  text-align: center;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  letter-spacing: 0.01em;
+}
+
+.disclaimer-banner strong {
+  color: var(--sun);
+}
+
+/* ---- Layout ------------------------------------------------------------- */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Header / nav ------------------------------------------------------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  text-decoration: none;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.brand span {
+  color: var(--purple);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: var(--purple);
+}
+
+/* ---- Hero --------------------------------------------------------------- */
+.hero {
+  padding: 72px 0 56px;
+  text-align: center;
+  background: radial-gradient(circle at 50% -10%, #fff, var(--paper) 60%);
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
+  letter-spacing: -0.03em;
+}
+
+.hero p.lede {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+
+/* ---- Buttons ------------------------------------------------------------ */
+.btn {
+  display: inline-block;
+  background: var(--purple);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.06s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--purple-light);
+  transform: translateY(-1px);
+}
+
+.btn.secondary {
+  background: var(--magenta);
+}
+
+.btn.secondary:hover {
+  background: var(--magenta-dark);
+}
+
+/* ---- Sections ----------------------------------------------------------- */
+section {
+  padding: 48px 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--magenta);
+}
+
+.price small {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---- Forms -------------------------------------------------------------- */
+.lead-form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  /* max-width: 520px; */
+}
+
+.lead-form h3 {
+  margin-top: 0;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid var(--magenta);
+  border-color: transparent;
+}
+
+.form-status {
+  margin-top: 12px;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.form-status.success {
+  color: var(--purple);
+}
+
+.form-status.error {
+  color: #d64545;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* ---- Blog --------------------------------------------------------------- */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.post-list a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.post-list a:hover {
+  color: var(--purple);
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+article.post {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+article.post p {
+  font-size: 1.08rem;
+}
+
+article.post img {
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: #fff;
+  padding: 36px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+.site-footer .disclaimer-full {
+  background: #f3eafc;
+  border: 1px dashed var(--purple);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  color: #4a2a63;
+}
+
+/* ---- Utility ------------------------------------------------------------ */
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.mt-0 {
+  margin-top: 0;
+}
