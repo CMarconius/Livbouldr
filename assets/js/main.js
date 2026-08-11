@@ -9,7 +9,7 @@
 // ---- CONFIG: replace before going live ------------------------------------
 const LIVBOULDR_CONFIG = {
   // Paste your Make.com custom-webhook URL here:
-  MAKE_WEBHOOK_URL: "https://hook.eu2.make.com/REPLACE_WITH_YOUR_WEBHOOK_ID",
+  MAKE_WEBHOOK_URL: "https://hook.eu1.make.com/o96gh76bw5nrgxhphb2ktk565zkostyw",
 };
 
 // ---- dataLayer helper ------------------------------------------------------
