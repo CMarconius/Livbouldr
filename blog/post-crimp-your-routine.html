@@ -72,12 +72,20 @@
           <form class="lead-form" data-lead-form data-form-name="blog_crimp_your_routine">
             <h3>Get the (fake) Crimp Your Routine worksheet</h3>
             <div class="field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+              <label for="first_name">First name</label>
+              <input type="text" id="first_name" name="first_name" required />
+            </div>
+            <div class="field">
+              <label for="last_name">Last name</label>
+              <input type="text" id="last_name" name="last_name" required />
             </div>
             <div class="field">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required />
+            </div>
+            <div class="field" style="display:flex; align-items:flex-start; gap:10px;">
+              <input type="checkbox" id="marketing_consent" name="marketing_consent" value="yes" style="width:auto; margin-top:5px;" />
+              <label for="marketing_consent" style="font-weight:400; margin-bottom:0;">Yes, (pretend to) email me Livbouldr tips and offers. I can unsubscribe anytime. (Parody: no real emails are sent.)</label>
             </div>
             <button class="btn" type="submit" data-cta="blog_crimp_your_routine_submit">Send me the fake worksheet</button>
             <p class="form-status"></p>
