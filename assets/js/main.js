@@ -1,14 +1,5 @@
-/* ==========================================================================
-   Livbouldr — tracking + form handling (PARODY SITE)
-   --------------------------------------------------------------------------
-   Everything routes through the dataLayer so GTM can own the tags/triggers.
-   Forms POST to a single Make.com webhook, which fans out to Brevo (contacts +
-   automation) and a Google Sheet. Replace the placeholder below with your real webhook.
-   ========================================================================== */
-
-// ---- CONFIG: replace before going live ------------------------------------
+// ---- CONFIG: ------------------------------------
 const LIVBOULDR_CONFIG = {
-  // Paste your Make.com custom-webhook URL here:
   MAKE_WEBHOOK_URL: "https://hook.eu1.make.com/o96gh76bw5nrgxhphb2ktk565zkostyw",
 };
 
@@ -74,7 +65,7 @@ function initForms() {
           started = false;
         })
         .catch(function (err) {
-          // Still record the attempt so you can see it in GA4.
+          // Still record the attempt so I can see it in GA4.
           dlPush("form_submit_error", { form_name: formName, error: String(err) });
           if (statusEl) {
             statusEl.textContent = "Hmm, that didn't send. Check the Make webhook URL in main.js.";
